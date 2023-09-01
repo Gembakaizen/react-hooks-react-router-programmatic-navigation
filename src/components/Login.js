@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 function Login({ setIsLoggedIn }) {
   const history = useHistory();
   const [formData, setFormData] = useState({
-    username: "",
+    username: "", 
     password: "",
   });
 
@@ -27,15 +27,20 @@ function Login({ setIsLoggedIn }) {
   return (
     <form onSubmit={handleSubmit}>
       <h1>Login</h1>
+      <label>username:</label>
       <input
         type="text"
-        name="username"
+        input="username"
+        name="username" 
         value={formData.username}
         onChange={handleChange}
+      
       />
+      <label>Password:</label>
       <input
         type="password"
         name="password"
+        input="password"
         value={formData.password}
         onChange={handleChange}
       />
